@@ -1,57 +1,26 @@
 #include "matrix.h"
 #include <stdlib.h>
 
+matrix *zero_matrix(int rows, int cols) { return NULL; }
 
-matrix *zero_matrix(int rows, int cols){
+int free_matrix(matrix *m) { return -1; }
 
-  return NULL;
-}
+int get_rows(matrix *m) { return -1; }
 
-int free_matrix(matrix *m){
-  return -1;
-}
+int get_cols(matrix *m) { return -1; }
 
-int get_rows(matrix *m){
+int set(matrix *m, int row, int col, int val) { return -1; }
 
-  return -1;
-}
+int get(matrix *m, int row, int col) { return -1; }
 
-int get_cols(matrix *m){
+matrix *add(matrix *m, matrix *n) { return NULL; }
 
-  return -1;
-}
+matrix *subtract(matrix *m, matrix *n) { return NULL; }
 
-int set(matrix *m, int row, int col, int val){
+matrix *scale(matrix *m, int val) { return NULL; }
 
-  return -1;
-}
+matrix *multiply(matrix *m, matrix *n) { return NULL; }
 
+matrix *rotate(matrix *m) { return NULL; }
 
-int get(matrix *m, int row, int col){
-  return -1;
-}
-
-matrix *add(matrix *m, matrix *n){
-  return NULL;
-}
-
-matrix *subtract(matrix *m, matrix *n){
-  return NULL;
-}
-
-matrix *scale(matrix *m, int val){
-  return NULL;
-}
-
-
-matrix *multiply(matrix *m, matrix *n){
-  return NULL;
-}
-
-matrix *rotate(matrix *m){
-  return NULL;
-}
-
-matrix *transpose(matrix *m){
-  return NULL;
-}
+matrix *transpose(matrix *m) { return NULL; }

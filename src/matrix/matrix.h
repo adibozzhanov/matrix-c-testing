@@ -4,8 +4,7 @@ typedef struct _matrix {
   int *body;
 } matrix;
 
-typedef enum m_error {ERROR, NO_ERROR} MATRIX_ERROR;
-
+typedef enum m_error { ERROR, NO_ERROR } MATRIX_ERROR;
 
 matrix *zero_matrix(int rows, int cols);
 // Dynamically allocates the matrix, with a given number of rows and columns
@@ -24,8 +23,6 @@ int free_matrix(matrix *m);
 //
 // set the error flag if something goes wrong
 // return: 0 if successful and -1 if something went wrong
-
-
 
 int get_rows(matrix *m);
 // Returns the number of rows of the given matrix.
@@ -92,8 +89,6 @@ matrix *subtract(matrix *m, matrix *n);
 // set the error flag in case anything goes wrong
 //
 // returns: *m, or NULL if anything is wrong
-
-
 
 matrix *scale(matrix *m, int val);
 // Subtracts 2 matrices element-wise and stores the result in the first matrix
