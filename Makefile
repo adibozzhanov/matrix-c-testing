@@ -6,7 +6,7 @@ run:
 	@./_build/matrix
 
 clean:
-	@rm -r _build/
+	@if [ -d "_build" ]; then rm -Rf _build; fi
 	@echo "Cleaned"
 
 test: tests/*_test.c
