@@ -44,14 +44,14 @@ How to write a test:
 
 - Add a new function like so
 
-		```c
-		test name_of_your_test(){
-			// your code goes here
+```c
+test name_of_your_test(){
+// your code goes here
 
-			assertEQ(a,b);
-		}
+assertEQ(a,b);
+}
 
-		```
+```
 
 - Make sure that the test is also added in the `TESTS(...)` Macro.
 
