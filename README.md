@@ -1,3 +1,33 @@
+# Makefile commands
+
+	make clean
+
+Deletes the `_build` directory.
+
+	make run
+
+Runs your code
+
+	make build
+
+Builds the template code
+
+	make build DIR_NAME=<directory-name>
+
+Pass the directory of your matrix source code that is inside the `src` folder
+to specify which implementation you want to run.
+
+	make test
+
+Goes over each file in the testing repository and compiles it together with
+the template code.
+
+	make test DIR_NAME=<directory-name>
+
+Replaces the template matrix code with any other implementation in the `src` folder, and
+runs ALL tests on them.
+
+
 # Task Description
 
 For this exercise you will need to split into pairs. One of you will implement a matrix
