@@ -17,12 +17,22 @@ test test_2() {
 
   assertEQ(1,0);
 }
+test test_3() {
+  // example of how a test fails
+  matrix* m =  zero_matrix(3, 3);
+
+  assertEQ(1,0);
+}
 
 
 
+// add all tests that you want to run right here
+TESTS(test_1,
+      test_2,
+      test_3
+      );
 
-TESTS(test_1, test_2);
-
+// don't touch this
 int main(void) {
   RUN_ALL;
 

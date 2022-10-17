@@ -2,7 +2,7 @@
 
 For this exercise you will need to split into pairs. One of you will implement a matrix
 in C and the other will write tests for that implementation. Both of you can see the
-Documentation of the matrix API in the ``src/matrix/matrix.h`` file.
+Documentation of the matrix API in the `src/matrix/matrix.h` file.
 
 You will need to create a branch and name it according to this format:
 
@@ -60,6 +60,9 @@ test name_of_your_test(){
 ```
 
 - Make sure that the test is also added in the `TESTS(...)` Macro.
+
+- YOU MUST use `assertEQ()` macro, return type of the function is `test` which is handled by the
+  macro.
 
 - That's it
 
