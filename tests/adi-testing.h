@@ -1,16 +1,25 @@
-#define assertEQ(x, y) return x == y;
+typedef struct _test {
+  int ret;
+  const char *name;
+} test;
 
-#define TEST                                                                   \
-  printf(__func__);                                                            \
-  printf(": ")
+#define assertEQ(x, y)                                                         \
+  test _t;                                                                     \
+  _t.ret = x == y;                                                             \
+  _t.name = __func__;                                                          \
+  return _t
 
-#define TESTS(...) int (*f[])() = {__VA_ARGS__}
+#define TESTS(...) test (*f[])() = {__VA_ARGS__, NULL}
 
 #define RUN_ALL                                                                \
-  for (int i = 0; i < N_TEST; i++) {                                           \
-    if (f[i]()) {                                                              \
-      printf("\033[0;32mPASSED\n\033[0m");                                     \
+  int _i = 0;                                                                  \
+  while (f[_i] != NULL) {                                                      \
+    test _t = f[_i]();                                                         \
+                                                                               \
+    if (_t.ret) {                                                              \
+      printf("├── %s : \033[0;32mPASSED\n\033[0m", _t.name);                       \
     } else {                                                                   \
-      printf("\033[0;31mFAILED\n\033[0m");                                     \
+      printf("├── %s : \033[0;31mFAILED\n\033[0m", _t.name);                       \
     }                                                                          \
+    _i++;                                                                      \
   }
