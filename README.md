@@ -101,3 +101,8 @@ relevant tests for execution in the `TESTS(...)` and push your code.
 Then just run `make test DIR_NAME=<name-of-the-folder>`. i.e.
 
 	make test DIR_NAME=adi-matrix
+
+## Finally
+
+At the end of the exercise, we will merge all branches together and run all implementations
+against all tests.
