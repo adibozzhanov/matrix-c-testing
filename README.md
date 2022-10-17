@@ -19,7 +19,7 @@ to specify which implementation you want to run.
 
 	make test
 
-Goes over each file in the testing repository and compiles it together with
+Goes over each file in the `tests` directory and compiles it together with
 the template code.
 
 	make test DIR_NAME=<directory-name>
