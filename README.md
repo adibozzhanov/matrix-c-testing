@@ -24,9 +24,9 @@ Copy the folder `/src/matrix` and name it like so `<name>-matrix`. You can see a
 of the copied folder `adi-matrix` inside of the `src` directory.
 
 Now write your implementation in `matrix.c`, if you want to run your code for a quick test
-then use `main.c`. Compile and build it like so:
+then use `main.c`. Compile and build it with `make build` and `make run` commands like so:
 
-	make build DIR_NAME=<folder-name>
+	make build DIR_NAME=adi-matrix
 	make run
 
 
