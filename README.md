@@ -24,7 +24,13 @@ Copy the folder `/src/matrix` and name it like so `<name>-matrix`. You can see a
 of the copied folder `adi-matrix` inside of the `src` directory.
 
 Now write your implementation in `matrix.c`, if you want to run your code for a quick test
-then use `main.c`. Make sure that your implementation is consistent with what is
+then use `main.c`. Compile and build it like so:
+
+	make build DIR_NAME=<folder-name>
+	make run
+
+
+Make sure that your implementation is consistent with what is
 described in `matrix.h`. Whenever you feel like you've managed to implement a single
 function, and your testing-mate has tests for that function, you should both push your
 code and run `make test DIR_NAME=<name-of-the-folder>` to see if it passes or fails anything.
@@ -46,9 +52,9 @@ How to write a test:
 
 ```c
 test name_of_your_test(){
-// your code goes here
+	// your code goes here
 
-assertEQ(a,b);
+	assertEQ(a,b);
 }
 
 ```
