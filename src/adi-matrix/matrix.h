@@ -24,6 +24,11 @@ int free_matrix(matrix *m);
 // set the error flag if something goes wrong
 // return: 0 if successful and -1 if something went wrong
 
+void print_matrix(matrix *m);
+// prints out the matrix
+// do it in whatever way you want... you don't have to test this one
+// this is more like for convenience.
+
 int get_rows(matrix *m);
 // Returns the number of rows of the given matrix.
 //

@@ -5,6 +5,8 @@ matrix *zero_matrix(int rows, int cols) { return NULL; }
 
 int free_matrix(matrix *m) { return -1; }
 
+void print_matrix(matrix *m) {}
+
 int get_rows(matrix *m) { return -1; }
 
 int get_cols(matrix *m) { return -1; }

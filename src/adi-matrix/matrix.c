@@ -1,13 +1,16 @@
 #include "matrix.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 matrix *zero_matrix(int rows, int cols) {
   printf("\nzero matrix that's running in adi's folder\n\n");
 
-  return NULL; }
+  return NULL;
+}
 
 int free_matrix(matrix *m) { return -1; }
+
+void print_matrix(matrix *m) {}
 
 int get_rows(matrix *m) { return -1; }
 
