@@ -6,7 +6,7 @@
 int test_1() {
   TEST;
   matrix *m = zero_matrix(3, 3);
-  assertEQ(m, NULL);
+  assertEQ(1,0);
 }
 
 const int N_TEST = 1;
