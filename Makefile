@@ -1,13 +1,18 @@
 build: src/main.c src/matrix/matrix.c
+	@mkdir -p _build
 	@gcc src/main.c src/matrix/matrix.c -o _build/matrix
 	@echo "build complete"
 run:
 	@./_build/matrix
 
+clean:
+	@rm -r _build/
+	@echo "Cleaned"
+
 test: tests/*_test.c
 	@for file in $^; do\
 		echo $${file};\
-		gcc $${file} src/matrix/matrix.c -o _build/test_matrix;\
-		./_build/test_matrix;\
+		gcc $${file} src/matrix/matrix.c -o _build/test_bin;\
+		./_build/test_bin;\
 		echo ;\
 	done
