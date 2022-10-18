@@ -4,6 +4,10 @@
 MATRIX_ERROR M_ERROR = NO_ERROR;
 
 matrix *zero_matrix(int rows, int cols) { 
+    if(rows <= 0 || cols <= 0){
+        M_ERROR = ERROR;
+        return NULL;
+    }
     matrix *m = (matrix *) malloc(sizeof(matrix));
     m->rows = rows;
     m->columns = cols;
