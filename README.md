@@ -1,21 +1,25 @@
 # Makefile commands
 
+## Clean
+
 	make clean
 
 Deletes the `_build` directory.
+
+## Run
 
 	make run
 
 Runs your code
 
-	make build
+	make run DIR_NAME=<directory-name>
 
-Builds the template code
 
-	make build DIR_NAME=<directory-name>
 
 Pass the directory of your matrix source code that is inside the `src` folder
 to specify which implementation you want to run.
+
+## Test
 
 	make test
 

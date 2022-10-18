@@ -1,11 +1,11 @@
 DIR_NAME?=matrix
 
-build:  src/matrix/matrix.c
+run:
 	@mkdir -p _build
 	@gcc src/${DIR_NAME}/main.c src/${DIR_NAME}/matrix.c -o _build/matrix
 	@echo "build complete"
-run:
 	@./_build/matrix
+
 
 clean:
 	@if [ -d "_build" ]; then rm -Rf _build; fi
