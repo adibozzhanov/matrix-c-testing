@@ -6,6 +6,8 @@ typedef struct _matrix {
 
 typedef enum m_error { ERROR, NO_ERROR } MATRIX_ERROR;
 
+matrix assertEQ(1,1);
+
 matrix *zero_matrix(int rows, int cols);
 // Dynamically allocates the matrix, with a given number of rows and columns
 // initialises all values to 0
