@@ -6,7 +6,7 @@ MATRIX_ERROR M_ERROR = NO_ERROR;
 
 matrix *zero_matrix(int rows, int cols) {
     int* body = (int *) malloc(rows * cols * sizeof(int));
-    matrix* zero_matrix = (int *) malloc(2*sizeof(int));
+    matrix* zero_matrix = (matrix *) malloc(2*sizeof(int));
     
     for (int i = 0; i < rows*cols; i++) {
         body[i] = 0;
