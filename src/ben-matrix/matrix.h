@@ -1,7 +1,7 @@
 typedef struct _matrix {
   int rows;
   int columns;
-  int *body;
+  int *body; // array
 } matrix;
 
 typedef enum m_error { NO_ERROR, ERROR } MATRIX_ERROR;

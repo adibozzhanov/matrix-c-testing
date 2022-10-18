@@ -1,10 +1,16 @@
 #include "matrix.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 MATRIX_ERROR M_ERROR = NO_ERROR;
 
 matrix *zero_matrix(int rows, int cols) {
-    printf("test");
+    int* body = (int *) malloc(rows * cols * sizeof(int));
+    matrix* zero_matrix = (int *) malloc(2*sizeof(int));
+    
+    for (int i = 0; i < rows*cols; i++) {
+        body[i] = 0;
+    }
     return NULL; 
 }
 
