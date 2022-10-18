@@ -4,13 +4,21 @@
 MATRIX_ERROR M_ERROR = NO_ERROR;
 
 matrix *zero_matrix(int rows, int cols) {
-    int *matrixArray = (int *)malloc(rows * cols * sizeof(int));
-    for (int i = 0; i < cols; i++) {
-        for (int j = 0; j < rows; j++) {
-            matrixArray[i*cols + j] = 0;
+    matrix *m = (matrix*)malloc(sizeof(matrix));
+    if ((rows <= 0) || (cols <= 0)) {
+        int *matrixArray = NULL;
+        M_ERROR = ERROR;
+    } else {
+        m->rows = rows;
+        m->columns = cols;
+        m->body = (int *)malloc(rows * cols * sizeof(int));
+        for (int i = 0; i < cols; i++) {
+            for (int j = 0; j < rows; j++) {
+                m->body[i*cols + j] = 0;
+            }
         }
     }
-    return NULL;
+    return m;
 }
 
 int free_matrix(matrix *m) {
@@ -18,7 +26,8 @@ int free_matrix(matrix *m) {
     return -1; 
 }
 
-void print_matrix(matrix *m) {}
+void print_matrix(matrix *m) {
+}
 
 int get_rows(matrix *m) { return -1; }
 
