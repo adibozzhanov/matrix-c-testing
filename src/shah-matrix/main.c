@@ -8,7 +8,5 @@ int main(void) {
 
   printf("program works\n");
 
-  printf("Hello Maestro!");
-
   return 0;
 }
