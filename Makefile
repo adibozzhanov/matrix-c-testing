@@ -14,7 +14,8 @@ clean:
 	@echo "Cleaned"
 
 test: tests/*_test.c
-
+	@echo "Using: ${DIR_NAME}"
+	@echo "------------------"
 	@mkdir -p _build
 	@for file in $^; do\
 		echo "$${file}";\
@@ -22,3 +23,4 @@ test: tests/*_test.c
 		./_build/test_bin;\
 		echo ;\
 	done
+	@echo "------------------"
