@@ -4,7 +4,7 @@
 MATRIX_ERROR M_ERROR = NO_ERROR;
 
 matrix *zero_matrix(int rows, int cols) {
-    free()
+    printf("test");
     return NULL; 
 }
 
