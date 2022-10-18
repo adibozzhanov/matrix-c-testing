@@ -5,10 +5,14 @@
 
 
 
-test test_1() {
-  // use this template to create tests
+test test_negative() {
+  //test if zero_matrix returns NULL if rows and columns parameter are 0
 
-  assertEQ(1,1);
+  //run zero_matrix
+  matrix result = zero_matrix(0,0);
+
+  //if result is NULL, then pass test
+  assertEQ(result,NULL);
 }
 
 test test_2() {
