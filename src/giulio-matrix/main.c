@@ -6,7 +6,5 @@ int main(void) {
 
   printf("this print statement is from main.c\n");
 
-  printf("program works\n");
-
   return 0;
 }

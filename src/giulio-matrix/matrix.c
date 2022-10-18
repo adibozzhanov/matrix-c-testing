@@ -4,11 +4,9 @@
 
 matrix *zero_matrix(int rows, int cols) {
   printf("this print statement is from matrix.c\n");
-  int matrix[rows][cols];
-  for (int i = 0; i < rows; i++) {
-    for (int j = 0; j < cols; j++) {
-      matrix[i][j] = 0;
-    }
+  int* matrix = malloc((rows * cols) * sizeof(int));
+  for (int i = 0; i < rows * cols; i++) {
+    matrix[i] = 0;
   }
   if (rows <= 0 || cols <= 0) {
     return NULL;
@@ -17,11 +15,16 @@ matrix *zero_matrix(int rows, int cols) {
   return matrix;
 }
 
-int free_matrix(matrix *m) { return -1; }
+int free_matrix(matrix *m) {
+  free(m);
+  return 0; 
+  } 
 
-void print_matrix(matrix *m) {}
+void print_matrix(matrix *m) {
+}
 
-int get_rows(matrix *m) { return -1; }
+int get_rows(matrix *m) {
+  }
 
 int get_cols(matrix *m) { return -1; }
 
