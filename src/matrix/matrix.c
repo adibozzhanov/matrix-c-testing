@@ -1,6 +1,8 @@
 #include "matrix.h"
 #include <stdlib.h>
 
+MATRIX_ERROR M_ERROR = NO_ERROR;
+
 matrix *zero_matrix(int rows, int cols) { return NULL; }
 
 int free_matrix(matrix *m) { return -1; }

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 matrix *zero_matrix(int rows, int cols) {
-  printf("\nzero matrix that's running in adi's folder\n\n");
+  printf("this print statement is from matrix.c\n");
 
   return NULL;
 }

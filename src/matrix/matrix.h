@@ -4,7 +4,9 @@ typedef struct _matrix {
   int *body;
 } matrix;
 
-typedef enum m_error { ERROR, NO_ERROR } MATRIX_ERROR;
+typedef enum m_error { NO_ERROR, ERROR } MATRIX_ERROR;
+
+extern MATRIX_ERROR M_ERROR;
 
 matrix *zero_matrix(int rows, int cols);
 // Dynamically allocates the matrix, with a given number of rows and columns

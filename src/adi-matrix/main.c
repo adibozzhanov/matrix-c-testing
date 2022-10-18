@@ -4,7 +4,7 @@
 int main(void) {
   matrix *m = zero_matrix(5, 5);
 
-  printf("\nADI-MATRIX\n\n");
+  printf("this print statement is from main.c\n");
 
   printf("program works\n");
 
