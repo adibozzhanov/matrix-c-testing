@@ -9,7 +9,7 @@ test test_negative() {
   //test if zero_matrix returns NULL if rows and columns parameter are 0
 
   //run zero_matrix
-  matrix result = zero_matrix(0,0);
+  matrix *result = zero_matrix(0,0);
 
   //if result is NULL, then pass test
   assertEQ(result,NULL);
@@ -31,7 +31,7 @@ test test_3() {
 
 
 // add all tests that you want to run right here
-TESTS(test_1,
+TESTS(test_negative,
       test_2,
       test_3
       );
