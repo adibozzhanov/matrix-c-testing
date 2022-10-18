@@ -1,6 +1,6 @@
 #include "matrix.h"
 #include <stdlib.h>
-#include <stdio.h>
+#include<stdio.h>
 
 MATRIX_ERROR M_ERROR = NO_ERROR;
 
