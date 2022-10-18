@@ -3,7 +3,9 @@ DIR_NAME?=matrix
 run:
 	@mkdir -p _build
 	@gcc src/${DIR_NAME}/main.c src/${DIR_NAME}/matrix.c -o _build/matrix
-	@echo "build complete"
+	@echo "Built successfully"
+	@echo "Using: ${DIR_NAME}"
+	@echo "------------------"
 	@./_build/matrix
 
 
