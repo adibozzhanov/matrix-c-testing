@@ -3,9 +3,20 @@
 
 MATRIX_ERROR M_ERROR = NO_ERROR;
 
-matrix *zero_matrix(int rows, int cols) { return NULL; }
+matrix *zero_matrix(int rows, int cols) {
+    int *matrixArray = (int *)malloc(rows * cols * sizeof(int));
+    for (int i = 0; i < cols; i++) {
+        for (int j = 0; j < rows; j++) {
+            matrixArray[i*cols + j] = 0;
+        }
+    }
+    return NULL;
+}
 
-int free_matrix(matrix *m) { return -1; }
+int free_matrix(matrix *m) {
+    free(m); 
+    return -1; 
+}
 
 void print_matrix(matrix *m) {}
 
