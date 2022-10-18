@@ -27,13 +27,10 @@ int free_matrix(matrix *m) {
 }
 
 void print_matrix(matrix *m) {
-    int rows = m->rows;
-    int cols = m->columns;
-    int* b = m->body;
-    for(int i=0;i<rows;i++){
-        for(int j=0;j<cols;j++){
-            printf("%d",b[i*rows+j]);
-            if(j != cols-1){
+    for(int i=0;i<m->rows;i++){
+        for(int j=0;j<m->columns;j++){
+            printf("%d",m->body[i*m->rows+j]);
+            if(j != m->columns-1){
                 printf(",");
             }
         }
