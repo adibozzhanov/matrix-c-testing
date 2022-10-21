@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+MATRIX_ERROR M_ERRROR = NO_ERROR;
+
 matrix *zero_matrix(int rows, int cols) {
   printf("this print statement is from matrix.c\n");
 
@@ -33,25 +35,22 @@ void print_matrix(matrix *m) {
 }
 
 int get_rows(matrix *m) {
-  if (m != NULL) {
+  if (M_ERRROR) {
     return m->rows;
   }
-  MATRIX_ERROR;
   return -1;
 
 }
 
 int get_cols(matrix *m) {
-  if (m != NULL) {
+  if (M_ERRROR) {
     return m->columns; 
   }
-  MATRIX_ERROR;
   return -1;
 }
 
 int set(matrix *m, int row, int col, int val) {
-  if (row >= m->rows || col >= m-> columns) {
-    MATRIX_ERROR;
+  if (M_ERRROR) {
     return -1;
   }
   m->body[row * row + col] = val;
