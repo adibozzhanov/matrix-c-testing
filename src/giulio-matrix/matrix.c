@@ -4,15 +4,20 @@
 
 matrix *zero_matrix(int rows, int cols) {
   printf("this print statement is from matrix.c\n");
-  int* matrix = malloc((rows * cols) * sizeof(int));
-  for (int i = 0; i < rows * cols; i++) {
-    matrix[i] = 0;
-  }
+
+  matrix *m = (matrix *)malloc(sizeof(matrix));
   if (rows <= 0 || cols <= 0) {
-    return NULL;
-    MATRIX_ERROR;
+    return m;
   }
-  return matrix;
+  m->rows = rows;
+  m->columns = cols;
+  m->body = malloc((m->rows * m->columns) * sizeof(int));
+  for (int i = 0; i < m->rows * m->columns; i++) {
+    m->body[i] = 0;  
+  }
+
+  return m;
+
 }
 
 int free_matrix(matrix *m) {
