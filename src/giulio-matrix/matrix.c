@@ -7,7 +7,7 @@ matrix *zero_matrix(int rows, int cols) {
 
   matrix *m = (matrix *)malloc(sizeof(matrix));
   if (rows <= 0 || cols <= 0) {
-    return m;
+    return NULL;
   }
   m->rows = rows;
   m->columns = cols;
@@ -15,7 +15,6 @@ matrix *zero_matrix(int rows, int cols) {
   for (int i = 0; i < m->rows * m->columns; i++) {
     m->body[i] = 0;  
   }
-
   return m;
 
 }
@@ -26,14 +25,38 @@ int free_matrix(matrix *m) {
   } 
 
 void print_matrix(matrix *m) {
+  for (int i = 0; i < m->rows; i++) {
+      for (int j = 0; j < m->columns; j++)
+          printf("%d ", m->body[i * m->columns + j]);
+      printf("\n");
+  }
 }
 
 int get_rows(matrix *m) {
+  if (m != NULL) {
+    return m->rows;
   }
+  MATRIX_ERROR;
+  return -1;
 
-int get_cols(matrix *m) { return -1; }
+}
 
-int set(matrix *m, int row, int col, int val) { return -1; }
+int get_cols(matrix *m) {
+  if (m != NULL) {
+    return m->columns; 
+  }
+  MATRIX_ERROR;
+  return -1;
+}
+
+int set(matrix *m, int row, int col, int val) {
+  if (row >= m->rows || col >= m-> columns) {
+    MATRIX_ERROR;
+    return -1;
+  }
+  m->body[row * row + col] = val;
+  return 0; 
+}
 
 int get(matrix *m, int row, int col) { return -1; }
 
