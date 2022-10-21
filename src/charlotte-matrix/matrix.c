@@ -41,11 +41,20 @@ void print_matrix(matrix *m) {
 }
 
 int get_rows(matrix *m) {
-    return m->rows;
+    if (m != NULL) {
+        return m->rows;
+    } else {
+        return -1;
+    }
 }
+   
 
 int get_cols(matrix *m) {
-    return m->columns;
+    if (m != NULL) {
+        return m->columns;
+    } else {
+        return -1;
+    }
 }
 
 int set(matrix *m, int row, int col, int val) { return -1; }
