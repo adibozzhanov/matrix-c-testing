@@ -4,6 +4,7 @@
 
 matrix *zero_matrix(int rows, int cols) {
   printf("this print statement is from matrix.c\n");
+  
   int* matrix = malloc((rows * cols) * sizeof(int));
   for (int i = 0; i < rows * cols; i++) {
     matrix[i] = 0;
