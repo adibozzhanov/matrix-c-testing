@@ -20,7 +20,7 @@ test: tests/*_test.c
 	@for file in $^; do\
 		echo "$${file}";\
 		gcc $${file} src/${DIR_NAME}/matrix.c -o _build/test_bin;\
-		./_build/test_bin;\
+		./_build/test_bin || (echo "SEGFAULT");\
 		echo ;\
 	done
 	@echo "------------------"
