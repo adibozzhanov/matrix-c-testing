@@ -6,7 +6,7 @@ matrix *zero_matrix(int rows, int cols) {
   printf("this print statement is from matrix.c\n");
   // fdjkasl;fjsdkl;a
   // fjdsikafjdksjf;sdal/
-  // fdjskafjdksl;ajf
+  // fdjskafjdksl;aj
   return NULL;
 }
 
