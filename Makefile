@@ -1,4 +1,4 @@
-DIR_NAME?=matrix
+DIR_NAME?=charlotte-matrix
 
 run:
 	@mkdir -p _build
