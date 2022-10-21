@@ -23,10 +23,22 @@ matrix *zero_matrix(int rows, int cols) {
 
 int free_matrix(matrix *m) {
     free(m); 
-    return -1; 
+    return 0;
+    //check for error????? 
 }
 
 void print_matrix(matrix *m) {
+    for (int r = 0; r < m->rows; r++) {
+        for (int c = 0; r < m->columns; c++) {
+            //print elements in each row
+            printf("%i", m->body[r*m->columns + c]);
+            if (c < m->columns-1) {
+                printf(" ");
+            }
+        }
+        //go to next row
+        printf("\n");
+    }
 }
 
 int get_rows(matrix *m) { return -1; }
