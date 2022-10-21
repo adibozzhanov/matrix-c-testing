@@ -21,9 +21,13 @@ matrix *zero_matrix(int rows, int cols) {
     }
 
 int free_matrix(matrix *m) { 
-
-
-    return -1; 
+    if(m == NULL){
+        M_ERROR = ERROR;
+        return -1;
+    }
+    free(m->body);
+    free(m);
+    return 0;
 }
 
 void print_matrix(matrix *m) {
@@ -38,13 +42,38 @@ void print_matrix(matrix *m) {
     }
 }
 
-int get_rows(matrix *m) { return -1; }
+int get_rows(matrix *m) { 
+    if(m == NULL){
+        M_ERROR = ERROR;
+        return -1; 
+    }
+    return m->rows;
+}
 
-int get_cols(matrix *m) { return -1; }
+int get_cols(matrix *m) { 
+    if(m == NULL){
+        M_ERROR = ERROR;
+        return -1; 
+    }
+    return m->columns; 
+}
 
-int set(matrix *m, int row, int col, int val) { return -1; }
+int set(matrix *m, int row, int col, int val) { 
+    if(m == NULL || row < 0 || col < 0 || m->rows < row || m->columns < col){
+        M_ERROR = ERROR;
+        return -1; 
+    } 
+    m->body[row*m->rows+col] = val;
+    return 0;
+}
 
-int get(matrix *m, int row, int col) { return -1; }
+int get(matrix *m, int row, int col) { 
+    if(m == NULL || row < 0 || col < 0 || m->rows < row || m->columns < col){
+        M_ERROR = ERROR;
+        return -1; 
+    }
+    return m->body[row*m->rows+col];
+}
 
 matrix *add(matrix *m, matrix *n) { return NULL; }
 
