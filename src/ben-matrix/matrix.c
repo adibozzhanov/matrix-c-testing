@@ -4,9 +4,9 @@
 
 MATRIX_ERROR M_ERROR = NO_ERROR;
 
-// issue with memory allocation for more than 20 values
+
 matrix *zero_matrix(int rows, int cols) {
-    matrix* m = (matrix *) malloc(sizeof(matrix));
+    matrix* m = (matrix*)malloc(sizeof(matrix));
     
     // set the attributes of m those passed into the fn
     m->rows = rows;
@@ -14,23 +14,24 @@ matrix *zero_matrix(int rows, int cols) {
     // and allocate memory for the array
     m->body = (int*)malloc(rows * cols * sizeof(int));
 
-    for (int i = 0; i < rows*cols; i++) {
+    // iterate through adding 0s
+    for (int i = 0; i <= rows*cols; i++) {
         m->body[i] = 0;
     }
+    
     return m;
 }
 
-// unsure
 int free_matrix(matrix *m) { 
     free(m);
     return -1; 
 }
 
-// kinda works
 void print_matrix(matrix *m) {
-    for (int i = 0; i < m->rows; i++) {
-        for (int j = 0; j < m->columns; j++) {
-            int index = m->body[i * m->columns + j];
+    // iterate through and print what is at (i,j)
+    for (int i = 0; i < get_rows(m); i++) {
+        for (int j = 0; j < get_cols(m); j++) {
+            int index = m->body[i * get_cols(m) + j];
             printf("%i", index);
         }
         printf("\n");
@@ -45,7 +46,11 @@ int get_cols(matrix *m) {
     return m->columns; 
 }
 
-int set(matrix *m, int row, int col, int val) { return -1; }
+int set(matrix *m, int row, int col, int val) { 
+    int index = row * get_cols(m) + col;
+    m->body[index] = val;
+    return 0; 
+}
 
 int get(matrix *m, int row, int col) { return -1; }
 
