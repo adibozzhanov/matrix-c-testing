@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main(void) {
-  matrix *m = zero_matrix(4, 5);
+  matrix *m = zero_matrix(20, 10);
   print_matrix(m);
 
   printf("program works\n");

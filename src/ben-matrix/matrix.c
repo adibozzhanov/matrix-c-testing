@@ -17,7 +17,7 @@ matrix *zero_matrix(int rows, int cols) {
     for (int i = 0; i < rows*cols; i++) {
         m->body[i] = 0;
     }
-    return m; 
+    return m;
 }
 
 // unsure
@@ -30,7 +30,7 @@ int free_matrix(matrix *m) {
 void print_matrix(matrix *m) {
     for (int i = 0; i < m->rows; i++) {
         for (int j = 0; j < m->columns; j++) {
-            int index = m->body[i * m->rows + m->columns];
+            int index = m->body[i * m->columns + j];
             printf("%i", index);
         }
         printf("\n");
